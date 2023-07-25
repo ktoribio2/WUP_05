@@ -18,10 +18,11 @@ triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 
 A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the DrugUsers, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
 
-$H_0$: The vaccine (drug) is not effective in preventing aids among deug users    
+In this project we are trying to discover if preventing aids among drug users will be affected by the vaccine and the placebo. Data from this study came from a clinical trial for the drug triUmpsal
+
+$H_0$: The vaccine (drug) is not effective in preventing aids among drug users    
 $H_A$: The vaccine (drug) is effective in preventing aids among drug users 
 
-Data from this study came from a clinical trial for the drug triUmpsal
 
 # Methods
 
@@ -76,10 +77,12 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The chisq test has a p-value of 0.0000001242 concluding that we are rejecting the null hypothesis, proving that the relationship between the vaccine and not getting aids exists.
+The chisq test has a p-value of 0.0000001242 concluding that we are rejecting the null hypothesis because it is so small, proving that the relationship between the vaccine and not getting aids exists.
 
 The fisher exact test is saying if you get the vaccine, you are 0.35 times less likely to get aids than someone who gets the placebo.
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+In conclusion, we are rejecting the null hypothesis. The drug is effective in preventing aids among drug users while the drug users that received the placebo were 3.5% more likely to get aids, showing a very clear distinction between then two.
