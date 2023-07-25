@@ -41,12 +41,18 @@ The graphical display will be a bar plot, the numerical display will be a cross 
 DruguserData = filter(triUmp, DrugUser == "yes")
 ```
 
-
 ## Descriptive Results
 
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
+
+```{r}
+barchartGC(~infected+treatment,data=DruguserData)
+barchartGC(~infected+treatment,data=DruguserData, type="percent")
+```
+
+Among those who did not get aids, half got the drug and half got the placebo, there is not much of a difference. However, among those who did get aids, there was more of a difference between the people who got the placebo adn the people who got the drug. The people who got the placebo were more likely to get aids. Concluding that the drug is effective among people with aids than those who received the placebo.
 
 ### Numerical Descriptive Results
 
