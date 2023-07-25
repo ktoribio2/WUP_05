@@ -52,11 +52,19 @@ barchartGC(~infected+treatment,data=DruguserData)
 barchartGC(~infected+treatment,data=DruguserData, type="percent")
 ```
 
-Among those who did not get aids, half got the drug and half got the placebo, there is not much of a difference. However, among those who did get aids, there was more of a difference between the people who got the placebo adn the people who got the drug. The people who got the placebo were more likely to get aids. Concluding that the drug is effective among people with aids than those who received the placebo.
+Among those who did not get aids, half got the drug and half got the placebo, there is not much of a difference. However, among those who did get aids, there was more of a difference between the people who got the placebo and the people who got the drug. The people who got the placebo were more likely to get aids. Concluding that the drug is effective among people with aids than those who received the placebo.
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+table1 <- xtabs(~infected+treatment, data=DruguserData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+This graph is showing that among all those who were infected with aids, 24% of them had the drug and 75% had the placebo. The people who received the placebo were 3x more likely to receive aids than those who received the drug.
 
 ## Inferential Results
 
