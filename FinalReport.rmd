@@ -8,6 +8,7 @@ output: html_document
 ```{r include=FALSE,echo=FALSE}
 require(tidyverse)
 require(tigerstats)
+require(dplyr)
 triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 ```
 
@@ -26,9 +27,20 @@ Data from this study came from a clinical trial for the drug triUmpsal
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
+We will be using the catergorical ~ catergorical variable analysis. This is because both variables, whether the subjects did or did not get aids, and whether they got the drug or placebo, are both catergorical and not numerical. 
+
+Because the question is about drug users, we have to subset the data to include only drug users 
+
+The graphical display will be a bar plot, the numerical display will be a cross table, and the inferential display will be a chsiq test.
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+
+```{r}
+DruguserData = filter(triUmp, DrugUser == "yes")
+```
+
 
 ## Descriptive Results
 
